@@ -1,10 +1,10 @@
 function imblocks = blockwindow(im, c, cspacing, pixdim, process)
-spaceind = linspace(1, pixdim-c/cspacing+1, pixdim/c*cspacing);
+spaceind = linspace(1, pixdim-c+1, pixdim/c*cspacing-1);
 imdouble = double(im);
 retblock = [];
 
 if strcmp(process, 'histogram')
-    g1 = fspecial('gaussian', 9,1);  % Gaussian with sigma_d 
+    g1 = fspecial('gaussian', 7,1);  % Gaussian with sigma_d 
     img1 = conv2(imdouble,g1,'same');  % blur image with sigma_d
     Ix = conv2(img1,[-1 0 1],'same');  % take x derivative 
     Iy = conv2(img1,[-1;0;1],'same');  % take y derivative
@@ -18,12 +18,10 @@ if strcmp(process, 'histogram')
     end
 end
 
-
 for i=1:size(spaceind, 2)
+   row = spaceind(1,i);
    for j=1:size(spaceind, 2)
-       currspace = spaceind(1,i);
-       row = currspace;
-       col = currspace;
+       col = spaceind(1,j);
        if strcmp(process, 'sum')
            impiece = imdouble(row:row+c-1, col:col+c-1);
            currsum = sum(impiece(:));

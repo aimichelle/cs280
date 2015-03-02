@@ -24,4 +24,4 @@ imagelset = train_large.images;
 pixdim = size(imagelset, 1);
 for i = 1:size(imagelset, 3)
     appendblock = blockwindow(imagelset(:,:,i), 4, 2, pixdim, 'sum');
-end
+end 
