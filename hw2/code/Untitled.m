@@ -16,12 +16,41 @@ for i = 1:7
     percorrect(1,i) = b(1,1);
 end
 
-scatter([sizevec], (100-[percorrect])/100);
-sizevec = [100,200,500,1000,2000,5000,10000];
-    
 
-imagelset = train_large.images;
-pixdim = size(imagelset, 1);
-for i = 1:size(imagelset, 3)
-    appendblock = blockwindow(imagelset(:,:,i), 4, 2, pixdim, 'sum');
+sizevec = [100,200,500,1000,2000,5000,10000];
+errorrates = (100-[percorrect])/100;
+scatter([sizevec], errorrates);
+a = errorrates'; b = num2str(a); c = cellstr(b);
+dx = 200; dy = 0.0035; % displacement so the text does not overlay the data points
+text(sizevec+dx, errorrates+dy, c);
+title('Linear SVM - Total Sum (c=4, c/2 spacing, cost -10)')
+xlabel('Number of Training Samples')
+ylabel('Error Rates')
+
+
+
+%Running through all data-sets using sum of window
+percorrect = zeros([1, 7]);
+[tlabels, tfeats] = featlabappender(test, 7, 2, 'sum');
+for i = 1:7
+    currset = train_diff{1, i};
+    [labels, feats] = featlabappender(currset, 7, 2, 'sum');
+    model = train(labels, feats, '-q -c 10');
+    [a, b, c] = predict(tlabels, tfeats, model);
+    percorrect(1,i) = b(1,1);
 end
+
+%Running through all data-sets using histogram of window
+percorrect = zeros([1, 7]);
+[tlabels, tfeats] = featlabappender(test, 7, 2, 'histogram');
+for i = 1:7
+    currset = train_diff{1, i};
+    [labels, feats] = featlabappender(currset, 7, 2, 'histogram');
+    model = train(labels, feats, '-q -c 10');
+    [a, b, c] = predict(tlabels, tfeats, model);
+    percorrect(1,i) = b(1,1);
+end
+
+[labels, feats] = featlabappender(train_large, 4, 2, 'histogram');
+model = train(labels, feats, '-q');
+[a, b, c] = predict(tlabels, tfeats, model);
