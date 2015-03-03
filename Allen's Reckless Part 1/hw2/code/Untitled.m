@@ -51,6 +51,7 @@ for i = 1:7
     percorrect(1,i) = b(1,1);
 end
 
+[tlabels, tfeats] = featlabappender(test, 4, 2, 'histogram');
 [labels, feats] = featlabappender(train_large, 4, 2, 'histogram');
 model = train(labels, feats, '-q');
 [a, b, c] = predict(tlabels, tfeats, model);

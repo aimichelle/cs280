@@ -15,3 +15,6 @@ text(sizevec+dx, errorrates+dy, c);
 
 xlabel('Number of Training Samples')
 ylabel('Error Rates')
+
+differinglabels = difflabels(aprime, tlabels);
+largefeats(:,:,differinglab);
