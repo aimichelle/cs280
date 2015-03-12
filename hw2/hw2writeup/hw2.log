@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 MAR 2015 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  11 MAR 2015 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -435,12 +435,12 @@ Package pdftex.def Info: diagrams/misclassifcation60k.png used on input line 53
 .
 (pdftex.def)             Requested size: 473.74168pt x 354.12057pt.
  [5 <./diagrams/misclassifcation60k.png (PNG copy)>] [6] <diagrams/nnschematic.
-png, id=37, 854.19125pt x 504.88625pt>
+png, id=37, 848.16875pt x 487.8225pt>
 File: diagrams/nnschematic.png Graphic file (type png)
 
 <use diagrams/nnschematic.png>
 Package pdftex.def Info: diagrams/nnschematic.png used on input line 61.
-(pdftex.def)             Requested size: 427.09459pt x 252.44249pt.
+(pdftex.def)             Requested size: 424.08333pt x 243.91064pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
@@ -451,7 +451,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 File: diagrams/filter.png Graphic file (type png)
 
 <use diagrams/filter.png>
-Package pdftex.def Info: diagrams/filter.png used on input line 75.
+Package pdftex.def Info: diagrams/filter.png used on input line 76.
 (pdftex.def)             Requested size: 176.76173pt x 176.4606pt.
  [8 <./diagrams/filter.png>] [9] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
@@ -469,7 +469,7 @@ t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist
 onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2014/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsl10.pfb>
-Output written on hw2.pdf (9 pages, 513598 bytes).
+Output written on hw2.pdf (9 pages, 566380 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
