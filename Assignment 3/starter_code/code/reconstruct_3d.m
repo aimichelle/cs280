@@ -82,7 +82,7 @@ for ti = 1:length(t)
         
         P2 = K2*[R2 t2];
         
-        [points_3d errs(ti,ri)] = find_3d_points(); %<---------------------- You write this one!
+        [points_3d errs(ti,ri)] = find_3d_points(matches, P1, P2); %<---------------------- You write this one!
         
         Z1 = points_3d(:,3);
         Z2 = R2(3,:)*points_3d'+t2(3);Z2 = Z2';
