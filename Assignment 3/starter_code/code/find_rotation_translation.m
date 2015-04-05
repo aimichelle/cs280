@@ -29,7 +29,7 @@ function [R, t] = find_rotation_translation(E)
     r4 = -U * inv(rot)' * V';
     if det(r4) > 0
         R{idx} = r4;
-        idx = idx + 1;
     end
+
 end
 
