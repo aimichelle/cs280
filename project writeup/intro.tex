@@ -27,10 +27,10 @@ We will train our CNN with images and labels taken from the FaceTracer dataset\c
 
 
 \section{Face Detection}
-	Good face detection algorithms have been around for a number of years. The Viola–--Jones algorithm provides relatively quick feature computation, efficient feature selection, and scale and location invariance, suitable for detection of faces on a large dataset.  We will then process faces by by creating a bounding box that will include the subject's headshot.
+	Good face detection algorithms have been around for a number of years. The Viola–--Jones algorithm provides relatively quick feature computation, efficient feature selection, and scale and location invariance, suitable for detection of faces on a large dataset.  We will then process faces by by creating a bounding box that will include the subject's headshot. We will implement face detection using OpenCV.
 
 \section{Feature Classification}
-	Once we have the faces and bounding box, we will use scale the faces to a fixed image size and then feed the labels into a layered CNN trained on a list of labels. These labels will include such features as gender, race, age, hair\textunderscore color, eye\textunderscore wear, mustache, expression. We will then test the accuracy of our classifier on a held-out set from the FaceTracer database and self-labeled images on the internet.
+	Once we have the faces and bounding box, we will use scale the faces to a fixed image size and then feed the labels into a layered CNN trained on a list of labels. These labels will include such features as gender, race, age, hair\textunderscore color, eye\textunderscore wear, mustache, expression. We will then test the accuracy of our classifier on a held-out set from the FaceTracer database and self-labeled images on the internet. We will train our CNN using Caffe.
 
 \begin{figure}
   \centering
